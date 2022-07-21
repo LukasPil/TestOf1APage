@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 public class Locators {
     public static class vienasA {
 
+        public static By formCookies = By.xpath("//div[@id='cookiebanner']");
+        public static By buttonAcceptCookies = By.xpath("//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']");
         public static By functionPrisijungti = By.xpath("//*[@class='user-block__title--strong']");
-        public static By formCookies = By.xpath("//*[@id=\"c-left\"]");
-        public static By buttonAcceptCookies = By.xpath("//*[@id=\"CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\"]");
         public static By buttonPrisijungti = By.xpath("//input[@value='Prisijungti']");
         public static By fieldNegativeMessage = By.xpath("//*[@id=\"new_user\"]/div[2]/p");
         public static By fieldEmail = By.xpath("//input[@id='user_email']");
