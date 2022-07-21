@@ -17,8 +17,8 @@ public class LoginWithValidData extends BaseTests {
         String password = "Testavimas1";
         String expectedMessage = "Mano profilis";
 
-        pages.vienasA.LoginWithValidData.clickPrisijungtiFuction();
         pages.vienasA.LoginWithValidData.acceptCookies();
+        pages.vienasA.LoginWithValidData.clickPrisijungtiFuction();
         pages.vienasA.LoginWithValidData.enterEmailAdress(email);
         pages.vienasA.LoginWithValidData.enterPassword(password);
         pages.vienasA.LoginWithValidData.clickPrisijungtiButton();

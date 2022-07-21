@@ -15,8 +15,8 @@ public class LoginWithNoData extends BaseTests {
     public void testLoginWithNoData() {
         String expectedMessage = "Neteisingas el. pašto adresas arba slaptažodis";
 
-        pages.vienasA.LoginWithNoData.clickPrisijungtiFuction();
         pages.vienasA.LoginWithNoData.acceptCookies();
+        pages.vienasA.LoginWithNoData.clickPrisijungtiFuction();
         pages.vienasA.LoginWithNoData.clickPrisijungtiButton();
         String actualMessage = pages.vienasA.LoginWithNoData.readMessage();
 
