@@ -11,8 +11,9 @@ public class LoginWithNoData {
     }
 
     public static void acceptCookies() {
-        Common.waitForElementToBeVisible(Locators.vienasA.formCookies);
-        Common.clickElement(Locators.vienasA.buttonAcceptCookies);
+        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.formCookies);
+        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.buttonAcceptCookies);
+        pages.vienasA.Common.clickElement(Locators.vienasA.buttonAcceptCookies);
     }
 
     public static void clickPrisijungtiButton() {

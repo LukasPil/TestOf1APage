@@ -14,8 +14,6 @@ public class Locators {
         public static By fieldPassword = By.xpath("//input[@id='user_password']");
         public static By buttonMyProfile = By.xpath("//div[@class='user-block__title']");
         public static By messageMyProfile = By.xpath("//h2[@class='profile-content__title']");
-        public static By productPageCookies = By.xpath("//div[@id='cookiebanner']");
-        public static By productPageButtonAcceptCookies = By.xpath("//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']");
         public static By fieldSearch = By.xpath("//input[@id='q']");
         public static By buttonSearch = By.xpath("//div[@class='main-search__submit']");
         public static By productImage = By.xpath("//div[@class='sn-product-inner ks-gtm-categories']");

@@ -7,8 +7,9 @@ public class AddProductToCart {
     }
 
     public static void acceptCookies() {
-        Common.waitForElementToBeVisible(Locators.vienasA.productPageCookies);
-        Common.clickElement(Locators.vienasA.productPageButtonAcceptCookies);
+        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.formCookies);
+        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.buttonAcceptCookies);
+        pages.vienasA.Common.clickElement(Locators.vienasA.buttonAcceptCookies);
     }
 
     public static void inputProductNameInSearchField(String productName) {
