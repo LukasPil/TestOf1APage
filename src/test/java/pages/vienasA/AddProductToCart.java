@@ -1,44 +1,47 @@
 package pages.vienasA;
 
+import pages.Common;
+import pages.Locators;
+
 public class AddProductToCart {
 
     public static void open() {
-        pages.vienasA.Common.openUrl("https://www.1a.lt/");
+        Common.openUrl("https://www.1a.lt/");
     }
 
     public static void acceptCookies() {
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.formCookies);
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.buttonAcceptCookies);
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonAcceptCookies);
+        Common.waitForElementToBeVisible(Locators.AddProductToCart.formCookies);
+        Common.waitForElementToBeVisible(Locators.AddProductToCart.buttonAcceptCookies);
+        Common.clickElement(Locators.AddProductToCart.buttonAcceptCookies);
     }
 
     public static void inputProductNameInSearchField(String productName) {
-        pages.vienasA.Common.sendKeysToElement(Locators.vienasA.fieldSearch, productName);
+        Common.sendKeysToElement(Locators.AddProductToCart.fieldSearch, productName);
     }
 
     public static void clickButtonSearch() {
-        pages.vienasA.Common.clickElementByAction(Locators.vienasA.buttonSearch);
+        Common.clickElementByAction(Locators.AddProductToCart.buttonSearch);
     }
 
     public static void clickOnProduct() {
-        Common.waitForElementToBeVisible(Locators.vienasA.productImage);
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonProduct);
+        Common.waitForElementToBeVisible(Locators.AddProductToCart.productImage);
+        Common.clickElement(Locators.AddProductToCart.buttonProduct);
     }
 
     public static void clickButtonAddToCart() {
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonAddToCart);
+        Common.clickElement(Locators.AddProductToCart.buttonAddToCart);
     }
 
     public static void clickButtonXToClosePopUp() {
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.popUpWindow);
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonXInPopUpWindow);
+        Common.waitForElementToBeVisible(Locators.AddProductToCart.popUpWindow);
+        Common.clickElement(Locators.AddProductToCart.buttonXInPopUpWindow);
     }
 
     public static void clickButtonCart() {
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttoonCart);
+        Common.clickElement(Locators.AddProductToCart.buttoonCart);
     }
 
     public static String readProductNameInTheCart() {
-        return pages.vienasA.Common.getElementText(Locators.vienasA.productNameInTheCart);
+        return Common.getElementText(Locators.AddProductToCart.productNameInTheCart);
     }
 }

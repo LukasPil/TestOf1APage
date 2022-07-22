@@ -3,12 +3,14 @@ package tests.vienasA;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import tests.BaseTest;
 
-public class LoginWithValidData extends BaseTests {
+public class LoginWithValidData extends BaseTest {
 
     @BeforeMethod
-    public void initialise() {
-        pages.vienasA.LoginWithValidData.open();
+    @Override
+    public void setUp() {
+        super.setUp();
     }
 
     @Test
@@ -17,6 +19,7 @@ public class LoginWithValidData extends BaseTests {
         String password = "Testavimas1";
         String expectedMessage = "Mano profilis";
 
+        pages.vienasA.LoginWithValidData.open();
         pages.vienasA.LoginWithValidData.acceptCookies();
         pages.vienasA.LoginWithValidData.clickPrisijungtiFuction();
         pages.vienasA.LoginWithValidData.enterEmailAdress(email);

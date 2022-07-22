@@ -3,18 +3,21 @@ package tests.vienasA;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import tests.BaseTest;
 
-public class LoginWithNoData extends BaseTests {
+public class LoginWithNoData extends BaseTest {
 
     @BeforeMethod
-    public void initialise() {
-        pages.vienasA.LoginWithNoData.open();
+    @Override
+    public void setUp() {
+        super.setUp();
     }
 
     @Test
     public void testLoginWithNoData() {
         String expectedMessage = "Neteisingas el. pašto adresas arba slaptažodis";
 
+        pages.vienasA.LoginWithNoData.open();
         pages.vienasA.LoginWithNoData.acceptCookies();
         pages.vienasA.LoginWithNoData.clickPrisijungtiFuction();
         pages.vienasA.LoginWithNoData.clickPrisijungtiButton();

@@ -1,31 +1,34 @@
 package pages.vienasA;
 
+import pages.Common;
+import pages.Locators;
+
 public class SearchField {
 
     public static void open() {
-        pages.vienasA.Common.openUrl("https://www.1a.lt/");
+        Common.openUrl("https://www.1a.lt/");
     }
 
     public static void acceptCookies() {
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.formCookies);
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.buttonAcceptCookies);
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonAcceptCookies);
+        Common.waitForElementToBeVisible(Locators.SearchField.formCookies);
+        Common.waitForElementToBeVisible(Locators.SearchField.buttonAcceptCookies);
+        Common.clickElement(Locators.SearchField.buttonAcceptCookies);
     }
 
     public static void inputProductNameInSearchField(String productName) {
-        pages.vienasA.Common.sendKeysToElement(Locators.vienasA.fieldSearch, productName);
+        Common.sendKeysToElement(Locators.SearchField.fieldSearch, productName);
     }
 
     public static void clickButtonSearch() {
-        pages.vienasA.Common.clickElementByAction(Locators.vienasA.buttonSearch);
+        Common.clickElementByAction(Locators.SearchField.buttonSearch);
     }
 
     public static void clickOnProduct() {
-        Common.waitForElementToBeVisible(Locators.vienasA.productImage);
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonProduct);
+        Common.waitForElementToBeVisible(Locators.SearchField.productImage);
+        Common.clickElement(Locators.SearchField.buttonProduct);
     }
 
     public static String readNameOfProduct() {
-        return pages.vienasA.Common.getElementText(Locators.vienasA.nameOfProduct);
+        return Common.getElementText(Locators.SearchField.nameOfProduct);
     }
 }

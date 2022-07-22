@@ -1,38 +1,41 @@
 package pages.vienasA;
 
+import pages.Common;
+import pages.Locators;
+
 public class LoginWithValidData {
 
     public static void open() {
-        pages.vienasA.Common.openUrl("https://www.1a.lt/");
+        Common.openUrl("https://www.1a.lt/");
     }
 
     public static void clickPrisijungtiFuction() {
-        pages.vienasA.Common.clickElement(Locators.vienasA.functionPrisijungti);
+        Common.clickElement(Locators.LoginWithValidData.functionPrisijungti);
     }
 
     public static void acceptCookies() {
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.formCookies);
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.buttonAcceptCookies);
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonAcceptCookies);
+        Common.waitForElementToBeVisible(Locators.LoginWithValidData.formCookies);
+        Common.waitForElementToBeVisible(Locators.LoginWithValidData.buttonAcceptCookies);
+        Common.clickElement(Locators.LoginWithValidData.buttonAcceptCookies);
     }
 
     public static void enterEmailAdress(String email) {
-        pages.vienasA.Common.sendKeysToElement(Locators.vienasA.fieldEmail, email);
+        Common.sendKeysToElement(Locators.LoginWithValidData.fieldEmail, email);
     }
 
     public static void enterPassword(String password) {
-        pages.vienasA.Common.sendKeysToElement(Locators.vienasA.fieldPassword, password);
+        Common.sendKeysToElement(Locators.LoginWithValidData.fieldPassword, password);
     }
 
     public static void clickPrisijungtiButton() {
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonPrisijungti);
+        Common.clickElement(Locators.LoginWithValidData.buttonPrisijungti);
     }
 
     public static void clickOnMyProfile() {
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonMyProfile);
+        Common.clickElement(Locators.LoginWithValidData.buttonMyProfile);
     }
 
     public static String readMessage() {
-        return pages.vienasA.Common.getElementText(Locators.vienasA.messageMyProfile);
+        return Common.getElementText(Locators.LoginWithValidData.messageMyProfile);
     }
 }

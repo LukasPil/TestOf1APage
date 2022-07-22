@@ -1,56 +1,59 @@
 package pages.vienasA;
 
+import pages.Common;
+import pages.Locators;
+
 public class CartSettingsAndPurchase {
 
     public static void open() {
-        pages.vienasA.Common.openUrl("https://www.1a.lt/");
+        Common.openUrl("https://www.1a.lt/");
     }
 
     public static void acceptCookies() {
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.formCookies);
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.buttonAcceptCookies);
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonAcceptCookies);
+        Common.waitForElementToBeVisible(Locators.CartSettingAndPurchase.formCookies);
+        Common.waitForElementToBeVisible(Locators.CartSettingAndPurchase.buttonAcceptCookies);
+        Common.clickElement(Locators.CartSettingAndPurchase.buttonAcceptCookies);
     }
 
     public static void inputProductNameInSearchField(String productName) {
-        pages.vienasA.Common.sendKeysToElement(Locators.vienasA.fieldSearch, productName);
+        Common.sendKeysToElement(Locators.CartSettingAndPurchase.fieldSearch, productName);
     }
 
     public static void clickButtonSearch() {
-        pages.vienasA.Common.clickElementByAction(Locators.vienasA.buttonSearch);
+        Common.clickElementByAction(Locators.CartSettingAndPurchase.buttonSearch);
     }
 
     public static void clickOnProduct() {
-        Common.waitForElementToBeVisible(Locators.vienasA.productImage);
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonProduct);
+        Common.waitForElementToBeVisible(Locators.CartSettingAndPurchase.productImage);
+        Common.clickElement(Locators.CartSettingAndPurchase.buttonProduct);
     }
 
     public static void clickButtonAddToCart() {
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonAddToCart);
+        Common.clickElement(Locators.CartSettingAndPurchase.buttonAddToCart);
     }
 
     public static void clickButtonXToClosePopUp() {
-        pages.vienasA.Common.waitForElementToBeVisible(Locators.vienasA.popUpWindow);
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonXInPopUpWindow);
+        Common.waitForElementToBeVisible(Locators.CartSettingAndPurchase.popUpWindow);
+        Common.clickElement(Locators.CartSettingAndPurchase.buttonXInPopUpWindow);
     }
 
     public static void clickButtonCart() {
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttoonCart);
+        Common.clickElement(Locators.CartSettingAndPurchase.buttoonCart);
     }
 
     public static void clickButtonToAddToMoreSameItems() {
-        pages.vienasA.Common.doubleClickByAction(Locators.vienasA.buttonPlusInCart);
+        Common.doubleClickByAction(Locators.CartSettingAndPurchase.buttonPlusInCart);
     }
 
     public static void clickButtonTesti() {
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonTestiInCart);
+        Common.clickElement(Locators.CartSettingAndPurchase.buttonTestiInCart);
     }
 
     public static void clickButtonTestiInRegistrationField() {
-        pages.vienasA.Common.clickElement(Locators.vienasA.buttonTestiInRegistration);
+        Common.clickElement(Locators.CartSettingAndPurchase.buttonTestiInRegistration);
     }
 
     public static String readMessage() {
-        return pages.vienasA.Common.getElementText(Locators.vienasA.fieldNegativeMessageInRegistration);
+        return Common.getElementText(Locators.CartSettingAndPurchase.fieldNegativeMessageInRegistration);
     }
 }

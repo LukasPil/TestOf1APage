@@ -3,13 +3,14 @@ package tests.vienasA;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import tests.BaseTest;
 
-public class CartSettingsAndPurchase extends BaseTests {
+public class CartSettingsAndPurchase extends BaseTest {
 
     @BeforeMethod
-    public void initialise() {
-        pages.vienasA.CartSettingsAndPurchase.open();
-
+    @Override
+    public void setUp() {
+        super.setUp();
     }
 
     @Test
@@ -18,6 +19,7 @@ public class CartSettingsAndPurchase extends BaseTests {
         String productName = "Kelioninis krepšys Ferrino Traveller PS 72133FCC, juoda";
         String expectedMessage = "Neteisingas el. pašto adresas.";
 
+        pages.vienasA.CartSettingsAndPurchase.open();
         pages.vienasA.CartSettingsAndPurchase.acceptCookies();
         pages.vienasA.CartSettingsAndPurchase.inputProductNameInSearchField(productName);
         pages.vienasA.CartSettingsAndPurchase.clickButtonSearch();
